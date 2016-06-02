@@ -1,0 +1,52 @@
+<form name="commentForm" class="comment-form">
+    <div>
+        <input class="form-control comment-email"
+               placeholder="Email"
+               ng-model="newComment.email"
+               name="email"
+               ng-pattern="/^.+@.+\..+$/"
+               required>
+    </div>
+    <div>
+            <textarea class="form-control comment-message"
+                      placeholder="Message"
+                      cols="50" rows="5" ng-model="newComment.message"
+                      name="message" required></textarea>
+    </div>
+
+    <div>
+
+        <button class="btn btn-primary comment-submit"
+                ng-click="postComment()"
+                ng-disabled="commentForm.$invalid">SUBMIT
+        </button>
+    </div>
+</form>
+
+
+<div class="comments-container">
+    <div class="feed-filter">
+        <span class="fa fa-search"></span>
+        <input type="text"
+               ng-model="filter.searchText"
+               class="form-control comment-email"
+               placeholder="Filter">
+    </div>
+
+    <div ng-repeat="comment in comments | filter: filter.searchText">
+        <div class="comment">
+            <div>
+                <img class="gravatar-img" gravatar-src="comment.email.toLowerCase()" gravatar-size="50">
+            </div>
+            <div class="message-container">
+                <span class="comment-email">{{comment.email}}</span>
+                <span class="comment-message">{{comment.message}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="no-comments" ng-if="comments.length == 0">
+        <div>It seems like we don't have any messages yet :<</div>
+        <div>Be the first to leave a message!</div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Comments Feed</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-gravatar/build/angular-gravatar.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+    <!--CONTROLLERS-->
+    <script src="pages/feed/feedController.js"></script>
+    <!--CONTROLLERS END-->
+
+    <!--STATES-->
+    <script src="pages/feed/feedState.js"></script>
+    <!--STATES END-->
+
+    <!--CONFIG-->
+    <script src="scripts/config/location.config.js"></script>
+    <!--CONFIG END-->
+
+    <!--SERVICES-->
+    <script src="scripts/services/commentsService.js"></script>
+    <!--SERVICES END-->
+
+
+    <base href="/">
+</head>
+<body ng-app="meanPanda">
+
+<div ng-include="'/pages/main/main.html'"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.header {
+    height: 80px;
+}
+
+.header-text {
+    font-size: 28px;
+}
+
+.comment-form {
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 30px 20px;
+    margin-bottom: 1px;
+
+    -webkit-box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
+    -moz-box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
+    box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
+
+}
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+
+    -webkit-box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
+    -moz-box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
+    box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
+    padding-bottom:20px;
+}
+
+.comments-container .no-comments {
+    padding:20px;
+}
+
+.feed-filter {
+    padding: 30px 20px 10px 20px;
+    position: relative;
+}
+
+.feed-filter input {
+    text-indent: 20px;
+}
+
+.feed-filter .fa-search {
+    position: absolute;
+    top: 38px;
+    left: 30px;
+    font-size: 15px;
+    color: #949494
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px 0 20px;
+    font-size: 14px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.comment .comment-email {
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.comment .comment-message {
+    color: #949494;
+    margin-top: 5px;
+}
+
+.gravatar-img {
+    border-radius: 5px;
+}
+
+.comment-form .comment-email {
+    margin-bottom: 10px;
+}
+
+.comment-form .comment-email.ng-invalid.ng-dirty { border: solid red 1px; }
+
+.comment-form .comment-submit {
+    margin-top: 10px;
+    float: right;
+}
+
+.btn-primary {
+    background-color: #41A6E0;
+    border-color: #63A4BE;
+}
+
+.form-control {
+    border-radius: 0;
+}
