@@ -2,5 +2,6 @@
 
 var app = angular.module('meanPanda', [
     'ui.router',
-    'ui.gravatar'
+    'ui.gravatar',
+    'vs-repeat'
 ]);

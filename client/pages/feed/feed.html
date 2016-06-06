@@ -32,15 +32,16 @@
                class="form-control comment-email"
                placeholder="Filter">
     </div>
-
-    <div ng-repeat="comment in comments | filter: filter.searchText">
-        <div class="comment">
-            <div>
-                <img class="gravatar-img" gravatar-src="comment.email.toLowerCase()" gravatar-size="50">
-            </div>
-            <div class="message-container">
-                <span class="comment-email">{{comment.email}}</span>
-                <span class="comment-message">{{comment.message}}</span>
+    <div vs-repeat class="repeat-container">
+        <div ng-repeat="comment in comments | filter: filter.searchText">
+            <div class="comment">
+                <div>
+                    <img class="gravatar-img" gravatar-src="comment.email.toLowerCase()" gravatar-size="50">
+                </div>
+                <div class="message-container">
+                    <span class="comment-email">{{comment.email}}</span>
+                    <span class="comment-message">{{comment.message}}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -49,4 +50,5 @@
         <div>It seems like we don't have any messages yet :<</div>
         <div>Be the first to leave a message!</div>
     </div>
+
 </div>

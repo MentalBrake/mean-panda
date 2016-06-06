@@ -2,6 +2,8 @@ body {
     margin: auto;
     width: 30%;
     padding: 10px;
+    overflow: hidden;
+
 }
 
 .header {
@@ -25,6 +27,12 @@ body {
 
 }
 
+.repeat-container {
+    height: 454px;
+    overflow: auto;
+    padding-bottom:10px;
+}
+
 .comments-container {
     display: flex;
     flex-direction: column;
@@ -32,11 +40,11 @@ body {
     -webkit-box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
     -moz-box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
     box-shadow: 0 0 2px 0 rgba(200, 200, 200, 1);
-    padding-bottom:20px;
+    padding-bottom: 20px;
 }
 
 .comments-container .no-comments {
-    padding:20px;
+    padding: 20px;
 }
 
 .feed-filter {
@@ -87,7 +95,9 @@ body {
     margin-bottom: 10px;
 }
 
-.comment-form .comment-email.ng-invalid.ng-dirty { border: solid red 1px; }
+.comment-form .comment-email.ng-invalid.ng-dirty {
+    border: solid red 1px;
+}
 
 .comment-form .comment-submit {
     margin-top: 10px;
